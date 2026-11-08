@@ -1,0 +1,43 @@
+[project]
+name = "diaw-json-to-csv"
+version = "0.1.0"
+description = "Converts a JSON export of the Quarto question catalogue for DIAW into a CSV for the evaexam question library."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+exclude-newer = "3 days"
+
+[tool.ruff]
+line-length = 160
+
+[tool.ruff.lint]
+select = [
+    "E", "W", # pycodestyle
+    "F",      # pyflakes
+    "I",      # import order
+    "N",      # pep8 naming
+    "UP",     # modern syntax for the target Python version
+    "B",      # bugbear: likely bugs
+    "SIM",    # simplifications
+    "PTH",    # pathlib instead of os.path
+    "RUF",    # ruff-specific
+]
+
+[tool.basedpyright]
+typeCheckingMode = "recommended"
+reportUnusedCallResult = false
+reportUninitializedInstanceVariable = false
+
+[tool.pytest]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.40.2",
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]

@@ -1,0 +1,27 @@
+# Editor configuration, see https://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 160
+
+[*.{py,sh,toml}]
+indent_size = 4
+
+[*.json]
+indent_size = unset
+
+[**/fixtures/**]
+trim_trailing_whitespace = false
+insert_final_newline = unset
+max_line_length = off
+# tables and template expressions can't be wrapped
+[*.{md,j2}]
+max_line_length = off
+
+[*.md]
+trim_trailing_whitespace = false

@@ -14,7 +14,6 @@ EXAMPLE: Question = {
     "stamm": "<p>Was ist <em>richtig</em>; was nicht?</p>",
     "schluessel": "Richtig",
     "distraktoren": ["Falsch A", "Falsch B", "Falsch C"],
-    "begruendung": "\n<p>Erster Absatz.</p>\n<p>Zweiter Absatz.</p>\n",
 }
 
 
@@ -39,7 +38,7 @@ def test_to_row_maps_all_columns() -> None:
         "",
         "",
         "k1-0-01",
-        "<p>Erster Absatz.</p> <p>Zweiter Absatz.</p>",
+        "",
         "",
     ]
 

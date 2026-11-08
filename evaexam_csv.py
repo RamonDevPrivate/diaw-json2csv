@@ -29,7 +29,6 @@ class Question(TypedDict):
     stamm: str
     schluessel: str
     distraktoren: list[str]
-    begruendung: str
 
 
 TEXT_FIELDS = sorted(Question.__required_keys__ - {"distraktoren"})
@@ -89,7 +88,7 @@ def to_row(question: Question) -> list[str | int]:
         "",  # K max. characters, only for open questions
         "",  # L extra flags, none for plain single choice
         question["id"],  # M short name, unused by evaexam; links back to the catalogue
-        one_line(question["begruendung"]),  # N explanation
+        "",  # N explanation, only shown in online exercises and participant reports
         "",  # O reference
     ]
 

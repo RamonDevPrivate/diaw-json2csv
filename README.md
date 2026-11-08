@@ -2,7 +2,7 @@
 
 Converts a JSON export of the Quarto question catalogue into a CSV file for import into the evaexam question library.
 
-Every question becomes a single choice question: the correct answer (`schluessel`) scores 1 point, each distractor 0 points. evaexam shuffles the answers itself when it creates variants of an exam. The question group in evaexam is the question's `abschnitt`. Question text, answers and explanation are passed on as HTML, joined onto one line; evaexam is expected to render the HTML, which has not yet been confirmed by an actual import. The catalogue id ends up in the evaexam field "Kurzname".
+Every question becomes a single choice question: the correct answer (`schluessel`) scores 1 point, each distractor 0 points. evaexam shuffles the answers itself when it creates variants of an exam. The question group in evaexam is the question's `abschnitt`. Question text and answers are passed on as HTML, joined onto one line; evaexam is expected to render the HTML, which has not yet been confirmed by an actual import. The catalogue id ends up in the evaexam field "Kurzname". The explanation (`begruendung`) is left out: evaexam only shows it in online exercises and participant reports, not on scanner exams.
 
 The CSV format follows the evaexam manual, section "Im- und Export der Fragenbibliothek" (columns A–O, no header row, CRLF line endings). The delimiter `;` and the encoding UTF-8 are defaults and can be changed if your evaexam installation expects something else.
 

@@ -1,5 +1,5 @@
 [project]
-name = "diaw-json-to-csv"
+name = "diaw-json2csv"
 version = "0.1.0"
 description = "Converts a JSON export of the Quarto question catalogue for DIAW into a CSV for the evaexam question library."
 readme = "README.md"

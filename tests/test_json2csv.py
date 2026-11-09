@@ -5,7 +5,7 @@ from typing import cast
 
 import pytest
 
-from evaexam_csv import Question, main, problems, to_row
+from json2csv import Question, main, problems, to_row
 
 EXAMPLE: Question = {
     "id": "k1-0-01",
